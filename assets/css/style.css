@@ -1,19 +1,194 @@
-/* Error: Undefined variable.
- *    ,
- * 22 |         $color: rgba($color, $amoount);
- *    |                              ^^^^^^^^
- *    '
- *   assets/scss/abstracts/_functions.scss 22:24  changeColor()
- *   assets/scss/components/_alerts.scss 16:17    @import
- *   assets/scss/style.scss 14:2                  root stylesheet */
+/* en style se importa todo para que se genere todo el archivo 
+ hay una jerarquia y un orden logico 
+*/
+/* primero se importan variables y funciones, despues componentes */
+/* funcion llamando a otra funcion */
+/* nesting => trabajar con capas 
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 22 \2502          $color: rgba($color, $amoount);\a    \2502                               ^^^^^^^^\a    \2575 \a   assets/scss/abstracts/_functions.scss 22:24  changeColor()\a   assets/scss/components/_alerts.scss 16:17    @import\a   assets/scss/style.scss 14:2                  root stylesheet";
+ 1.- propiedades
+ 2.- propias clases
+
+  */
+.dsc-card {
+  width: 250px;
+  padding: 0;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #11cc46;
 }
+.dsc-card__body {
+  height: 50px;
+  text-align: center;
+  background-color: #0511ac;
+  line-height: 50px;
+}
+.dsc-card img {
+  width: 100%;
+  height: 150px;
+  display: block;
+}
+.dsc-card h1 {
+  height: 50px;
+  line-height: 50px;
+  margin: 0;
+}
+
+.dsc-title-primary {
+  font-size: 1.75rem;
+  color: #0511ac;
+}
+
+.dsc-title-secondary {
+  font-size: 1.75rem;
+  color: #11cc46;
+}
+
+.dsc-title-dark {
+  color: black;
+  font-size: 1.75rem;
+  font-weight: 20px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* haciendo una lista de colores */
+/* usando el selector placeholder, se usa el %*/
+.dsc-btn-danger, .dsc-btn-success, .dsc-btn-primary {
+  height: 40px;
+  min-width: 100px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  margin: 5px 0;
+  box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.2);
+}
+.dsc-btn-danger:hover, .dsc-btn-success:hover, .dsc-btn-primary:hover {
+  cursor: pointer;
+}
+
+.dsc-btn-primary {
+  background-color: #0511ac;
+}
+.dsc-btn-success {
+  background-color: #28c028;
+}
+.dsc-btn-danger {
+  background-color: #e72f38;
+}
+
+/* usando mixin */
+.btn-outline {
+  background-color: #ccc;
+  min-width: 100px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  margin: 5px 0;
+  height: 40px;
+  cursor: pointer;
+  transition: 0.5s all ease-in-out;
+  /* 
+   &-primary {
+  	 border: 1px solid $primary;
+  	 color: $primary;
+  	 &:hover{
+  		 background: $primary;
+  		 color: white;
+  	 }
+   }
+
+   &-success {
+  	 border: 1px solid $primary;
+  	 color: $primary;
+  	 &:hover{
+  		 background: rgb(40,192,40);
+  		 color: white;
+  	 }
+   }
+
+   &-danger {
+  	 border: 1px solid $primary;
+  	 color: $primary;
+  	 &:hover{
+  		 background: red;
+  		 color: white;
+  	 }
+   }
+   */
+}
+.btn-outline-primary {
+  border: 1px solid #0511ac;
+  color: #0511ac;
+}
+.btn-outline-primary:hover {
+  background: #3d4af9;
+  color: #fff;
+}
+.btn-outline-secondary {
+  border: 1px solid #11cc46;
+  color: #11cc46;
+}
+.btn-outline-secondary:hover {
+  background: #5ff289;
+  color: #fff;
+}
+.btn-outline-success {
+  border: 1px solid #28c028;
+  color: #28c028;
+}
+.btn-outline-success:hover {
+  background: #75e275;
+  color: #fff;
+}
+.btn-outline-danger {
+  border: 1px solid #e72f38;
+  color: #e72f38;
+}
+.btn-outline-danger:hover {
+  background: #f18288;
+  color: #fff;
+}
+.btn-outline-light {
+  border: 1px solid #fff;
+  color: #fff;
+}
+.btn-outline-light:hover {
+  background: white;
+  color: #fff;
+}
+
+/* size */
+.im-container {
+  height: 200px;
+  width: 200px;
+  padding: 1rem;
+  margin: 1rem;
+  background: red;
+}
+.im-container-big {
+  height: 400px;
+  width: 400px;
+  padding: 1rem;
+  margin: 1rem;
+  background: green;
+}
+
+.alert-primary, .alert-danger {
+  width: calc(100% - 1rem - 30px);
+  padding: 15px;
+  margin: 0.5rem;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  letter-spacing: 5px;
+  font-family: "Lato," sans-serif;
+  color: #fff;
+}
+.alert-primary {
+  background: #0511a8;
+}
+.alert-danger {
+  background: #f28a8f;
+}
+
+/*# sourceMappingURL=style.css.map */
