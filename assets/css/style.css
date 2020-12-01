@@ -1,0 +1,19 @@
+/* Error: Undefined variable.
+ *    ,
+ * 22 |         $color: rgba($color, $amoount);
+ *    |                              ^^^^^^^^
+ *    '
+ *   assets/scss/abstracts/_functions.scss 22:24  changeColor()
+ *   assets/scss/components/_alerts.scss 16:17    @import
+ *   assets/scss/style.scss 14:2                  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 22 \2502          $color: rgba($color, $amoount);\a    \2502                               ^^^^^^^^\a    \2575 \a   assets/scss/abstracts/_functions.scss 22:24  changeColor()\a   assets/scss/components/_alerts.scss 16:17    @import\a   assets/scss/style.scss 14:2                  root stylesheet";
+}

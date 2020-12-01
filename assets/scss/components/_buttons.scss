@@ -1,0 +1,137 @@
+/* haciendo una lista de colores */
+//$colors: "primaruy"  $primary, "success" $success, "danger" $danger;
+
+
+
+/* usando el selector placeholder, se usa el %*/
+// Solid buttons
+%btn{
+	height: 40px;
+	min-width: 100px;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 16px;
+	margin: 5px 0;
+	box-shadow: 2px 2px 6px 2px rgba(0,0,0,0.2);
+	&:hover{
+		cursor: pointer;
+	}
+}
+
+
+
+.#{$brand}-btn-{
+	&primary{
+@extend %btn; // extend de la clase btn
+background-color: map-get($map: $palette, $key: 'primary'); 
+}
+
+&success{
+@extend %btn; // extend de la clase btn
+background-color: rgb(40,192,40);
+}
+
+
+&danger{
+@extend %btn; // extend de la clase btn
+background-color: rgb(231,47,56);
+}
+}
+
+
+
+/* usando mixin */
+@mixin button ($name,$color){
+	&-#{$name}{
+	border: 1px solid $color;
+	color: $color;
+	&:hover{
+	background: scale-color($color,$lightness: 40%); 
+	color: #fff;
+	}
+	}
+}
+
+
+// Outline Buttons
+.btn-outline {
+ background-color: #ccc;
+ min-width: 100px;
+ border-radius: 5px;
+ box-shadow: 2px 2px 6px 2px rgba(0,0,0,0.2);
+ font-size: 16px;
+ margin: 5px 0;
+ height: 40px;
+ cursor: pointer;
+ transition: 0.5s all ease-in-out;
+
+
+@each $name, $color in $palette {
+ @include button($name,$color);
+}
+
+
+
+// accediendo a la lista usando nth
+// @include button('primary', nth($colors,1));
+// @include button('success', nth($colors,2));
+// @include button('danger', nth($colors,3));
+/* 
+ &-primary {
+	 border: 1px solid $primary;
+	 color: $primary;
+	 &:hover{
+		 background: $primary;
+		 color: white;
+	 }
+ }
+
+ &-success {
+	 border: 1px solid $primary;
+	 color: $primary;
+	 &:hover{
+		 background: rgb(40,192,40);
+		 color: white;
+	 }
+ }
+
+ &-danger {
+	 border: 1px solid $primary;
+	 color: $primary;
+	 &:hover{
+		 background: red;
+		 color: white;
+	 }
+ }
+ */
+}
+
+// para llamar al mixin se usa include y se llama por el nombre que le asignamos "button"
+
+
+
+
+/* size */
+
+@mixin size ($h, $w, $p, $m, $bg) {
+// .#{$name}{
+ height: $h;
+ width: $w;
+ padding: $p;
+ margin: $m;
+ background: $bg;
+// }
+}
+
+.im{
+	&-container{
+		@include size(200px, 200px,1rem,1rem,red);
+
+		&-big{
+		@include size(400px, 400px,1rem,1rem,green);
+		}
+
+	}
+}
+

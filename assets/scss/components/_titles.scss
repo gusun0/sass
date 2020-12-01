@@ -1,0 +1,23 @@
+.#{$brand}-title-primary{
+ 	font-size: $font-size;
+ 	color: map-get($map: $palette, $key: 'primary'); 
+ }
+ 
+ 
+ 
+ .#{$brand}-title-secondary{
+ 	font-size: $font-size;
+ 	color: map-get($map: $palette, $key: 'secondary'); 
+ }
+ 
+ 
+ .#{$brand}-title-dark{
+ 	color: $dark_opacity;
+ 	//nesting
+ 	font:{
+ 	 size: $font-size;
+ 	 weight: 20px;
+ 	 family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+ 	}
+ }
+ 

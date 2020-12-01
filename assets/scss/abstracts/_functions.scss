@@ -1,0 +1,28 @@
+@function color($name){
+ @return map-get($map: $palette, $key: $name);
+}
+
+
+/* funcion llamando a otra funcion */
+@function reduceColor($name, $amount){
+ @return lighten(color($name), $amount);
+}
+
+@function changeColor($name, $type: darken, $amount: 1, $colorMix: #fff){
+// pasando el color por defecto
+	$color: color($name);
+	@if $type == darken{
+		$color: darken($color, $amount);
+	}@else if $type == lighten{
+		$color: lighten($color, $amount);
+	}@else if $type == mixcolor{
+		$color: mix($color,$colorMix);
+	}@else{
+		// agregamos una opacidad
+		$color: rgba($color, $amoount);
+	}
+
+	@return $color;
+}
+
+

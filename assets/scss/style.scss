@@ -1,0 +1,58 @@
+/* en style se importa todo para que se genere todo el archivo 
+ hay una jerarquia y un orden logico 
+*/
+
+// Abstracts
+/* primero se importan variables y funciones, despues componentes */
+@import 'abstracts/variables',
+	'abstracts/functions';
+
+// Components
+@import 'components/cards',
+	'components/titles',
+	'components/buttons',
+	'components/alerts';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
