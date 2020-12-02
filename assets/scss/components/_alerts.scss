@@ -21,7 +21,7 @@
 	 //background: map-get($map: $palette, $key: 'danger');
 	 //background: color('danger');
 	 //background: reduceColor('success',10);
-	   background: changeColor('danger',lighten,20); 
+	   background: changeColor('danger',mixcolor,20,yellow); 
  }
 }
 

@@ -2,6 +2,7 @@
  hay una jerarquia y un orden logico 
 */
 /* primero se importan variables y funciones, despues componentes */
+/* trabajandolo como mapas */
 /* funcion llamando a otra funcion */
 /* nesting => trabajar con capas 
 
@@ -34,6 +35,13 @@
   margin: 0;
 }
 
+/* hacemos una funcion */
+.main-card {
+  height: 250px;
+  width: 166.6666666667px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
 .dsc-title-primary {
   font-size: 1.75rem;
   color: #0511ac;
@@ -49,6 +57,27 @@
   font-size: 1.75rem;
   font-weight: 20px;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* usando la sentencia de control each */
+.title-xs {
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.title-md {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.title-lg {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.title-xl {
+  font-size: 64px;
+  font-weight: 900;
 }
 
 /* haciendo una lista de colores */
@@ -157,6 +186,30 @@
   background: white;
   color: #fff;
 }
+.btn-outline-orange {
+  border: 1px solid #ff8000;
+  color: #ff8000;
+}
+.btn-outline-orange:hover {
+  background: #ffb366;
+  color: #fff;
+}
+.btn-outline-blue {
+  border: 1px solid blue;
+  color: blue;
+}
+.btn-outline-blue:hover {
+  background: #6666ff;
+  color: #fff;
+}
+.btn-outline-dark {
+  border: 1px solid black;
+  color: black;
+}
+.btn-outline-dark:hover {
+  background: #666666;
+  color: #fff;
+}
 
 /* size */
 .im-container {
@@ -188,7 +241,97 @@
   background: #0511a8;
 }
 .alert-danger {
-  background: #f28a8f;
+  background: #f3971c;
+}
+
+.table {
+  border-collpase: collapse;
+}
+.table td {
+  padding: 10px;
+  border-left: 1px solid rgba(255, 255, 0, 0.3);
+  border-right: 1px solid rgba(255, 255, 0, 0.3);
+}
+
+/* sentencia de control for */
+tbody tr:nth-child(1) {
+  background: linear-gradient(to bottom, #3b3bc2, #4d4dc9);
+}
+
+tbody tr:nth-child(2) {
+  background: linear-gradient(to bottom, #4d4dc9, #6161cf);
+}
+
+tbody tr:nth-child(3) {
+  background: linear-gradient(to bottom, #6161cf, #7575d5);
+}
+
+tbody tr:nth-child(4) {
+  background: linear-gradient(to bottom, #7575d5, #8888db);
+}
+
+tbody tr:nth-child(5) {
+  background: linear-gradient(to bottom, #8888db, #9c9ce1);
+}
+
+tbody tr:nth-child(6) {
+  background: linear-gradient(to bottom, #9c9ce1, #afafe7);
+}
+
+tbody tr:nth-child(7) {
+  background: linear-gradient(to bottom, #afafe7, #c3c3ed);
+}
+
+tbody tr:nth-child(8) {
+  background: linear-gradient(to bottom, #c3c3ed, #d6d6f3);
+}
+
+tbody tr:nth-child(9) {
+  background: linear-gradient(to bottom, #d6d6f3, #eaeaf9);
+}
+
+tbody tr:nth-child(10) {
+  background: linear-gradient(to bottom, #eaeaf9, #fdfdff);
+}
+
+tbody tr:nth-child(11) {
+  background: linear-gradient(to bottom, #fdfdff, white);
+}
+
+tbody tr:nth-child(12) {
+  background: linear-gradient(to bottom, white, white);
+}
+
+tbody tr:nth-child(13) {
+  background: linear-gradient(to bottom, white, white);
+}
+
+tbody tr:nth-child(14) {
+  background: linear-gradient(to bottom, white, white);
+}
+
+tbody tr:nth-child(15) {
+  background: linear-gradient(to bottom, white, white);
+}
+
+tbody tr:nth-child(16) {
+  background: linear-gradient(to bottom, white, white);
+}
+
+tbody tr:nth-child(17) {
+  background: linear-gradient(to bottom, white, white);
+}
+
+tbody tr:nth-child(18) {
+  background: linear-gradient(to bottom, white, white);
+}
+
+tbody tr:nth-child(19) {
+  background: linear-gradient(to bottom, white, white);
+}
+
+tbody tr:nth-child(20) {
+  background: linear-gradient(to bottom, white, white);
 }
 
 /*# sourceMappingURL=style.css.map */

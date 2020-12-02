@@ -21,3 +21,15 @@
  	}
  }
  
+
+/* usando la sentencia de control each */
+@each $name, $size, $fw in $titles{
+// declaramos una clase
+.title-#{$name}{
+ font-size: $size;
+ font-weight: $fw;
+}
+}
+
+
+

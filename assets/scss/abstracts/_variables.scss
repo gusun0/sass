@@ -13,11 +13,17 @@ $palette: (
 'secondary': rgb(17,204,70),
 'success': rgb(40,192,40),
 'danger': rgb(231,47,56),
-'light': #fff 
+'light': #fff,
+'orange': rgb(255,128,0),
+'blue': rgb(0,0,255),
+'dark': rgb(0,0,0) 
 );
 
 
+//$titles: 16, 20, 24, 32;
+//$titles:( 'xs': 16px 100, 'md': 20px 500, 'lg': 24px 600, 'xl': 64px 900);
 
-
+/* trabajandolo como mapas */
+$titles:( 'xs' 16px 100, 'md' 20px 500, 'lg' 24px 600, 'xl' 64px 900);
 
 

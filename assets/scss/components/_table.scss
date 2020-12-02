@@ -1,0 +1,20 @@
+.table{
+border-collpase: collapse;
+td{
+ padding: 10px;
+ border-left: 1px solid rgba(255,255,0,.3);
+ border-right: 1px solid rgba(255,255,0,.3);
+}
+}
+/* sentencia de control for */
+@for $row from 1 through 20 {
+ // va a afectar a las columnas 1 -> 6
+ tbody tr:nth-child(#{$row}){
+ // generando un degradado, se pone ($col - 1) porque tomamos el color del row anterior
+ background: linear-gradient(to bottom, lighten(rgb(59,59,194), ($row - 1) * 5%), lighten(rgb(59,59,194), $row * 5%));	 
+ }
+}
+
+
+
+

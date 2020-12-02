@@ -13,13 +13,17 @@
 	$color: color($name);
 	@if $type == darken{
 		$color: darken($color, $amount);
-	}@else if $type == lighten{
+	}@else if $type == lighten {
 		$color: lighten($color, $amount);
-	}@else if $type == mixcolor{
+	}@else if $type == mixcolor {
+		$findColor: color($colorMix);
+		@if($findColor){
+	  	$colorMix: $findColor;	
+		}
 		$color: mix($color,$colorMix);
 	}@else{
 		// agregamos una opacidad
-		$color: rgba($color, $amoount);
+		$color: rgba($color, $amount);
 	}
 
 	@return $color;
